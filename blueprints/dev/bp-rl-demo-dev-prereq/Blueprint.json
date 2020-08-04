@@ -1,6 +1,6 @@
 {
   "properties": {
-    "description": "Deploy the following:\n\nAzure Key Vault: rl-akv-demo001-dev\nAzure Resource Group: rl-rg-demo001-dev",
+    "description": "Deploy the following:\n\nAzure Key Vault: rl-kv-demo001-dev\nAzure Resource Group: rl-rg-demo001-dev",
     "targetScope": "subscription",
     "parameters": {},
     "resourceGroups": {

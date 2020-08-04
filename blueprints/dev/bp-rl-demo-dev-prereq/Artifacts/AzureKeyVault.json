@@ -9,7 +9,7 @@
       "contentVersion": "1.0.0.0",
       "parameters": {
         "vaults_rl_akv_001_dev_name": {
-          "defaultValue": "rl-akv-demo001-dev",
+          "defaultValue": "rl-kv-demo001-dev",
           "type": "String"
         }
       },
@@ -82,7 +82,7 @@
     "resourceGroup": "ResourceGroup",
     "parameters": {
       "vaults_rl_akv_001_dev_name": {
-        "value": "rl-akv-demo001-dev"
+        "value": "rl-kv-demo001-dev"
       }
     }
   }

@@ -1,0 +1,46 @@
+{
+  "kind": "template",
+  "properties": {
+    "displayName": "Azure Data FactoryV2-dev",
+    "description": "Azure Data FactoryV2-dev",
+    "dependsOn": [],
+    "template": {
+      "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "name": {
+          "type": "string",
+          "defaultValue": "adf2-shc-wu-eap-dev"
+        },
+        "location": {
+          "type": "string",
+          "defaultValue": "west us",
+          "metadata": {
+            "description": "Location for your data factory"
+          }
+        }
+      },
+      "resources": [
+        {
+          "apiVersion": "2018-06-01",
+          "name": "[parameters('name')]",
+          "location": "[parameters('location')]",
+          "type": "Microsoft.DataFactory/factories",
+          "identity": {
+            "type": "SystemAssigned"
+          },
+          "properties": {}
+        }
+      ]
+    },
+    "resourceGroup": "ResourceGroup",
+    "parameters": {
+      "name": {
+        "value": "rl-adf2-demo001-dev"
+      },
+      "location": {
+        "value": "centralus"
+      }
+    }
+  }
+}

@@ -240,7 +240,7 @@
         "value": "Central US"
       },
       "vaultName": {
-        "value": "rl-akv-demo001-dev"
+        "value": "rl-kv-demo001-dev"
       },
       "databaseName": {
         "value": "rl-db-demo001-dev"

@@ -1,0 +1,93 @@
+{
+  "kind": "template",
+  "properties": {
+    "displayName": "Azure Data Lake Sotrage Gen2-dev",
+    "description": "Azure Data Lake Sotrage Gen2-dev",
+    "dependsOn": [],
+    "template": {
+      "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "configuration": {
+          "type": "object",
+          "metadata": {
+            "description": "Configuration for this resource"
+          }
+        },
+        "storageAccounts_name": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "accountType": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "accessTier": {
+          "type": "string"
+        },
+        "supportsHttpsTrafficOnly": {
+          "type": "bool"
+        },
+        "isHnsEnabled": {
+          "type": "bool"
+        }
+      },
+      "variables": {},
+      "functions": [],
+      "resources": [
+        {
+          "type": "Microsoft.Storage/storageAccounts",
+          "name": "[parameters('storageAccounts_name')]",
+          "apiVersion": "2018-07-01",
+          "location": "[resourceGroup().location]",
+          "tags": "[parameters('configuration')]",
+          "properties": {
+            "accessTier": "[parameters('accessTier')]",
+            "supportsHttpsTrafficOnly": "[parameters('supportsHttpsTrafficOnly')]",
+            "isHnsEnabled": "[parameters('isHnsEnabled')]"
+          },
+          "dependsOn": [],
+          "sku": {
+            "name": "[parameters('accountType')]"
+          },
+          "kind": "[parameters('kind')]"
+        }
+      ],
+      "outputs": {}
+    },
+    "resourceGroup": "ResourceGroup",
+    "parameters": {
+      "configuration": {
+        "value": {
+          "Project": "EAP",
+          "Environment": "dev"
+        }
+      },
+      "storageAccounts_name": {
+        "value": "rladls2demo001dev"
+      },
+      "location": {
+        "value": "Central US"
+      },
+      "accountType": {
+        "value": "Standard_RAGRS"
+      },
+      "kind": {
+        "value": "StorageV2"
+      },
+      "accessTier": {
+        "value": "Hot"
+      },
+      "supportsHttpsTrafficOnly": {
+        "value": true
+      },
+      "isHnsEnabled": {
+        "value": true
+      }
+    }
+  }
+}
