@@ -1,0 +1,17 @@
+{
+  "properties": {
+    "description": "Deploy the following:\n\nAzure Key Vault: rl-akv-demo001-qa\nAzure Resource Group: rl-rg-demo001-qa",
+    "targetScope": "subscription",
+    "parameters": {},
+    "resourceGroups": {
+      "ResourceGroup": {
+        "name": "rl-rg-demo001-qa",
+        "location": "centralus",
+        "metadata": {
+          "displayName": "Resource Group"
+        },
+        "dependsOn": []
+      }
+    }
+  }
+}

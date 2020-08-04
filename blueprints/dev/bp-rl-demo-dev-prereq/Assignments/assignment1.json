@@ -1,0 +1,15 @@
+{
+  "identity": {
+    "type": "SystemAssigned"
+  },
+  "location": "centralus",
+  "properties": {
+    "description": "Assignment of the blueprint",
+    "blueprintId": "/subscriptions/b0103275-aec3-488d-a5fb-404e22f47fb5/providers/Microsoft.Blueprint/blueprints/bp-rl-demo-dev-prereq-POWERSHELL_IMPORT",
+    "locks": {
+      "mode": "AllResourcesReadOnly",
+      "excludedPrincipals": [
+      ]
+    }
+  }   
+}

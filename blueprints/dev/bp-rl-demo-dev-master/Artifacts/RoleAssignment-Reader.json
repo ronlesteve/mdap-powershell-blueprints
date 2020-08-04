@@ -1,0 +1,11 @@
+{
+  "kind": "roleAssignment",
+  "properties": {
+    "displayName": "rl-demo001-reader (null) : Reader",
+    "dependsOn": [],
+    "roleDefinitionId": "/providers/Microsoft.Authorization/roleDefinitions/acdd72a7-3385-48ef-bd42-f606fba81ae7",
+    "principalIds": [
+      "0aaff546-a688-4436-b0c6-ca72e1c45dfe"
+    ]
+  }
+}

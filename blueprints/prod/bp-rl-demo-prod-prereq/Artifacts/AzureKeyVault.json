@@ -1,0 +1,89 @@
+{
+  "kind": "template",
+  "properties": {
+    "displayName": "Azure Key Vault",
+    "description": "",
+    "dependsOn": [],
+    "template": {
+      "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "vaults_rl_akv_001_prod_name": {
+          "defaultValue": "rl-akv-demo001-prod",
+          "type": "String"
+        }
+      },
+      "variables": {},
+      "resources": [
+        {
+          "type": "Microsoft.KeyVault/vaults",
+          "apiVersion": "2016-10-01",
+          "name": "[parameters('vaults_rl_akv_001_prod_name')]",
+          "location": "centralus",
+          "properties": {
+            "sku": {
+              "family": "A",
+              "name": "Standard"
+            },
+            "tenantId": "96f7a95f-5003-46f0-8cac-767686885602",
+            "accessPolicies": [
+              {
+                "tenantId": "96f7a95f-5003-46f0-8cac-767686885602",
+                "objectId": "6c1b30e7-70d7-4559-985e-9b5e0f2daef0",
+                "permissions": {
+                  "keys": [
+                    "Get",
+                    "List",
+                    "Update",
+                    "Create",
+                    "Import",
+                    "Delete",
+                    "Recover",
+                    "Backup",
+                    "Restore"
+                  ],
+                  "secrets": [
+                    "Get",
+                    "List",
+                    "Set",
+                    "Delete",
+                    "Recover",
+                    "Backup",
+                    "Restore"
+                  ],
+                  "certificates": [
+                    "Get",
+                    "List",
+                    "Update",
+                    "Create",
+                    "Import",
+                    "Delete",
+                    "Recover",
+                    "Backup",
+                    "Restore",
+                    "ManageContacts",
+                    "ManageIssuers",
+                    "GetIssuers",
+                    "ListIssuers",
+                    "SetIssuers",
+                    "DeleteIssuers"
+                  ]
+                }
+              }
+            ],
+            "enabledForDeployment": true,
+            "enabledForDiskEncryption": false,
+            "enabledForTemplateDeployment": true,
+            "enableSoftDelete": true
+          }
+        }
+      ]
+    },
+    "resourceGroup": "ResourceGroup",
+    "parameters": {
+      "vaults_rl_akv_001_dev_name": {
+        "value": "rl-akv-demo001-prod"
+      }
+    }
+  }
+}

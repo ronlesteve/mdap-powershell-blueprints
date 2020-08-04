@@ -1,0 +1,11 @@
+{
+  "kind": "roleAssignment",
+  "properties": {
+    "displayName": "rl-demo001-owner (null) : Owner",
+    "dependsOn": [],
+    "roleDefinitionId": "/providers/Microsoft.Authorization/roleDefinitions/8e3af657-a8ff-443c-a75c-2fe8c4bcb635",
+    "principalIds": [
+      "aca7cc3a-13a9-4e45-9101-c29b28311f2b"
+    ]
+  }
+}

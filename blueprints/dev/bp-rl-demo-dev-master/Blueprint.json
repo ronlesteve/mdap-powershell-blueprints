@@ -1,0 +1,121 @@
+{
+  "properties": {
+    "description": "Deploy the following Azure Resources:\n\nAzure SQL Server and Dabatase\nAzure Databricks\nAzure Synapse Analytics\nAzure Data Factory V2\nAzure Data Lake Storage Gen2",
+    "targetScope": "subscription",
+    "parameters": {
+      "azureSynapseAnalytics-dev_privateEndpointSubscriptionId": {
+        "type": "string",
+        "metadata": {
+          "displayName": "privateEndpointSubscriptionId (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": "",
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_privateEndpointResourceGroup": {
+        "type": "string",
+        "metadata": {
+          "displayName": "privateEndpointResourceGroup (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": "",
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_privateEndpointName": {
+        "type": "string",
+        "metadata": {
+          "displayName": "privateEndpointName (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": "",
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_privateEndpointLocation": {
+        "type": "string",
+        "metadata": {
+          "displayName": "privateEndpointLocation (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": "",
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_privateLinkServiceName": {
+        "type": "string",
+        "metadata": {
+          "displayName": "privateLinkServiceName (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": "",
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_privateLinkServiceServiceId": {
+        "type": "string",
+        "metadata": {
+          "displayName": "privateLinkServiceServiceId (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": "",
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_privateEndpointVnetSubscriptionId": {
+        "type": "string",
+        "metadata": {
+          "displayName": "privateEndpointVnetSubscriptionId (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": "",
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_privateEndpointVnetResourceGroup": {
+        "type": "string",
+        "metadata": {
+          "displayName": "privateEndpointVnetResourceGroup (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": "",
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_privateEndpointVnetName": {
+        "type": "string",
+        "metadata": {
+          "displayName": "privateEndpointVnetName (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": "",
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_privateEndpointSubnetName": {
+        "type": "string",
+        "metadata": {
+          "displayName": "privateEndpointSubnetName (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": "",
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_privateEndpointDnsRecordUniqueId": {
+        "type": "string",
+        "metadata": {
+          "displayName": "privateEndpointDnsRecordUniqueId (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": "",
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_administratorLoginPassword": {
+        "type": "secureString",
+        "metadata": {
+          "displayName": "administratorLoginPassword (Azure Synapse Analytics-dev)"
+        },
+        "allowedValues": []
+      },
+      "azureSynapseAnalytics-dev_serverTags": {
+        "type": "object",
+        "metadata": {
+          "displayName": "serverTags (Azure Synapse Analytics-dev)"
+        },
+        "defaultValue": {},
+        "allowedValues": []
+      }
+    },
+    "resourceGroups": {
+      "ResourceGroup": {
+        "name": "rl-rg-demo001-dev",
+        "location": "centralus",
+        "metadata": {
+          "displayName": "Resource Group-dev"
+        },
+        "dependsOn": []
+      }
+    }
+  }
+}
